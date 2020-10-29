@@ -3,7 +3,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://gentle-harbor-29630.herokuapp.com/",
+  "proxy": "https://glacial-fortress-07261.herokuapp.com/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
