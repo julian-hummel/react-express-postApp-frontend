@@ -55,7 +55,7 @@ function App() {
       <div className="App">
         <NavigationBar/>
         <FlashMessage/>
-        <Route exact path="/" component={Landing} />
+        <Route exact path="/react-express-postApp-frontend" component={Landing} />
           <div className="container">
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
