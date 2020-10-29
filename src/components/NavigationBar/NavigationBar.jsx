@@ -31,12 +31,12 @@ export default function NavigationBar(props) {
 
     return (
         <Navbar id="navbar" bg="light" expand="lg">
-            <Navbar.Brand id="logo" href="/">React</Navbar.Brand>
+            <Navbar.Brand id="logo" href="#">React</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Item><Nav.Link to="#">Home</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link to="#posts">Sprüche</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="#">Home</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="#posts">Sprüche</Nav.Link></Nav.Item>
                     {!isAuthenticated && <Nav.Item><Button className="registerButton" href="#register" variant="primary" size="sm">Registrieren</Button>{' '}</Nav.Item>}
                     {isAuthenticated && <Nav.Item><Button href="#profile" className="profileButton" variant="primary" size="sm">Profil</Button>{' '}</Nav.Item>}
                 </Nav>
