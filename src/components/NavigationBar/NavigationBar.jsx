@@ -12,7 +12,7 @@ export default function NavigationBar(props) {
     const dispatch = useDispatch()
    
     const loginBtn = (
-        <Nav.Item><Button className="loginButton" href="react-express-postApp-frontend/login" variant="primary" size="sm">Login</Button>{' '}</Nav.Item>
+        <Nav.Item><Button className="loginButton" href="/react-express-postApp-frontend/login" variant="primary" size="sm">Login</Button>{' '}</Nav.Item>
     );
     const logoutBtn = (     
         <Nav.Item><Button onClick={handleLogout} className="logoutButton" variant="primary" size="sm">Logout</Button>{' '}</Nav.Item>
@@ -35,9 +35,9 @@ export default function NavigationBar(props) {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Item><Nav.Link href="/react-express-postApp-frontend">Home</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="react-express-postApp-frontend/posts">Sprüche</Nav.Link></Nav.Item>
-                    {!isAuthenticated && <Nav.Item><Button className="registerButton" href="react-express-postApp-frontend/register" variant="primary" size="sm">Registrieren</Button>{' '}</Nav.Item>}
-                    {isAuthenticated && <Nav.Item><Button href="react-express-postApp-frontend/profile" className="profileButton" variant="primary" size="sm">Profil</Button>{' '}</Nav.Item>}
+                    <Nav.Item><Nav.Link href="/react-express-postApp-frontend/posts">Sprüche</Nav.Link></Nav.Item>
+                    {!isAuthenticated && <Nav.Item><Button className="registerButton" href="/react-express-postApp-frontend/register" variant="primary" size="sm">Registrieren</Button>{' '}</Nav.Item>}
+                    {isAuthenticated && <Nav.Item><Button href="/react-express-postApp-frontend/profile" className="profileButton" variant="primary" size="sm">Profil</Button>{' '}</Nav.Item>}
                 </Nav>
                 <Nav className="ml-auto">
                     {isAdmin && <Button id="adminBtn" size="sm" variant="outline-danger">Admin</Button>}

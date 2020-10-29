@@ -56,12 +56,10 @@ function App() {
         <NavigationBar/>
         <FlashMessage/>
         <Route exact path="/" component={Landing} />
-          
-            <Route path="/register" component={Register} />
-            <Route path="/login" component={Login} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/posts" component={Post} />
-          
+        <Route path="/register" component={Register} />
+        <Route path="/login" component={Login} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/posts" component={Post} />
       </div>
     </Router>
   );
