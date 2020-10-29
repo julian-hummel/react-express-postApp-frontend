@@ -12,7 +12,7 @@ export default function NavigationBar(props) {
     const dispatch = useDispatch()
    
     const loginBtn = (
-        <Nav.Item><Button className="loginButton" href="/react-express-postApp-frontend/login" variant="primary" size="sm">Login</Button>{' '}</Nav.Item>
+        <Nav.Item><Button className="loginButton" href="/login" variant="primary" size="sm">Login</Button>{' '}</Nav.Item>
     );
     const logoutBtn = (     
         <Nav.Item><Button onClick={handleLogout} className="logoutButton" variant="primary" size="sm">Logout</Button>{' '}</Nav.Item>
