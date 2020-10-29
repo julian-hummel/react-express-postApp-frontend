@@ -1,0 +1,43 @@
+#container {
+    width: 400px;
+    margin-left: 50px
+}
+
+#submitBtn {
+    height: 50px;
+    margin-left: 50px
+}
+
+#postHeader {
+    margin-left: 50px;
+    width: 420px
+}
+
+#postContent {
+    height: 150px;
+    width: 420px;
+    margin-left: 50px
+
+}
+
+#postContainer {
+    width: 500px;
+    height: auto;
+    border: 1px solid #bfc0c7;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 50%;
+}
+
+#headerCard {
+    font-weight: bolder;
+}
+
+#removePostBtn {
+    position: center;
+    margin-top: 10px
+}
+
+#postForm {
+    margin-left: 50%
+}

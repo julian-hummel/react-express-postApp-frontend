@@ -1,0 +1,39 @@
+#registerContainer {
+    width: 400px;
+    height: auto;
+    border: 1.5px solid grey;
+    border-radius: 10px;
+    position: center;
+    margin: auto;
+    margin-top: 7%;
+}
+
+.registerForm {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.brand {
+    margin-top: 15px;
+}
+
+.button {
+    height: 40px; 
+    font-size: medium;
+}
+
+.help-block {
+    font-size: small;
+}
+
+#errorMessages {
+    font-size: medium;
+    color: red;
+    border: 1px solid red;
+    width: auto;
+    height: 30px;
+    border-radius: 7px;
+    text-align: center;
+}

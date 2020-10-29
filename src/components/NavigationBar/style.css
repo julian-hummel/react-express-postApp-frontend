@@ -1,0 +1,33 @@
+#logo {
+    font-weight: bold;
+}
+
+.mr-auto {
+    margin-top: 3px;
+}
+
+.registerButton {
+    margin-top: 5px;
+}
+
+.loginButton {
+    margin-top: 5px;
+}
+
+.logoutButton {
+    margin-top: 5px;
+}
+
+.profileButton {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#login {
+    margin-top: 5px;
+}
+
+#adminBtn {
+    margin-top: 5px;
+    margin-right: 10px
+}
