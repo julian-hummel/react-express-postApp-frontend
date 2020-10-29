@@ -57,10 +57,10 @@ function App() {
         <FlashMessage/>
         <Route exact path="/" component={Landing} />
           <div className="container">
-            <Route exact path="react-express-postApp-frontend/register/" component={Register} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/profile" component={Profile} />
-            <Route exact path="/posts" component={Post} />
+            <Route path="register" component={Register} />
+            <Route path="login" component={Login} />
+            <Route path="profile" component={Profile} />
+            <Route path="posts" component={Post} />
           </div>
       </div>
     </Router>
