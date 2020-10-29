@@ -35,8 +35,8 @@ export default function NavigationBar(props) {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Item><Link to="#">Home</Link></Nav.Item>
-                    <Nav.Item><Link to="#posts">Sprüche</Link></Nav.Item>
+                    <Nav.Item><Nav.Link to="#">Home</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link to="#posts">Sprüche</Nav.Link></Nav.Item>
                     {!isAuthenticated && <Nav.Item><Button className="registerButton" href="#register" variant="primary" size="sm">Registrieren</Button>{' '}</Nav.Item>}
                     {isAuthenticated && <Nav.Item><Button href="#profile" className="profileButton" variant="primary" size="sm">Profil</Button>{' '}</Nav.Item>}
                 </Nav>
