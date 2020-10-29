@@ -3,7 +3,7 @@ import './App.css';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import Landing from './components/Landing/Landing';
 import Login from './components/Login/Login';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import Register from './components/Register/Register';
 import Profile from './components/Profile/Profile'
 import Post from './components/Post/Post'
