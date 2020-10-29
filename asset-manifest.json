@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/react-express-postApp-frontend/static/css/main.7781475d.chunk.css",
-    "main.js": "/react-express-postApp-frontend/static/js/main.05d82de0.chunk.js",
-    "main.js.map": "/react-express-postApp-frontend/static/js/main.05d82de0.chunk.js.map",
+    "main.js": "/react-express-postApp-frontend/static/js/main.cbecbc0a.chunk.js",
+    "main.js.map": "/react-express-postApp-frontend/static/js/main.cbecbc0a.chunk.js.map",
     "runtime-main.js": "/react-express-postApp-frontend/static/js/runtime-main.faaa014b.js",
     "runtime-main.js.map": "/react-express-postApp-frontend/static/js/runtime-main.faaa014b.js.map",
     "static/css/2.2a86faee.chunk.css": "/react-express-postApp-frontend/static/css/2.2a86faee.chunk.css",
-    "static/js/2.8d67d3be.chunk.js": "/react-express-postApp-frontend/static/js/2.8d67d3be.chunk.js",
-    "static/js/2.8d67d3be.chunk.js.map": "/react-express-postApp-frontend/static/js/2.8d67d3be.chunk.js.map",
+    "static/js/2.69586b96.chunk.js": "/react-express-postApp-frontend/static/js/2.69586b96.chunk.js",
+    "static/js/2.69586b96.chunk.js.map": "/react-express-postApp-frontend/static/js/2.69586b96.chunk.js.map",
     "index.html": "/react-express-postApp-frontend/index.html",
-    "precache-manifest.247930f25458f876778d15d47850e009.js": "/react-express-postApp-frontend/precache-manifest.247930f25458f876778d15d47850e009.js",
+    "precache-manifest.6bc6232d0ebf90c4f52a1dbe87fe2380.js": "/react-express-postApp-frontend/precache-manifest.6bc6232d0ebf90c4f52a1dbe87fe2380.js",
     "service-worker.js": "/react-express-postApp-frontend/service-worker.js",
     "static/css/2.2a86faee.chunk.css.map": "/react-express-postApp-frontend/static/css/2.2a86faee.chunk.css.map",
     "static/css/main.7781475d.chunk.css.map": "/react-express-postApp-frontend/static/css/main.7781475d.chunk.css.map",
-    "static/js/2.8d67d3be.chunk.js.LICENSE.txt": "/react-express-postApp-frontend/static/js/2.8d67d3be.chunk.js.LICENSE.txt"
+    "static/js/2.69586b96.chunk.js.LICENSE.txt": "/react-express-postApp-frontend/static/js/2.69586b96.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.faaa014b.js",
     "static/css/2.2a86faee.chunk.css",
-    "static/js/2.8d67d3be.chunk.js",
+    "static/js/2.69586b96.chunk.js",
     "static/css/main.7781475d.chunk.css",
-    "static/js/main.05d82de0.chunk.js"
+    "static/js/main.cbecbc0a.chunk.js"
   ]
 }
