@@ -5,7 +5,6 @@ import { selectAuth, logoutCurrentUser, selectAdmin } from '../../features/auth/
 import { addFlashMessage } from '../../features/flashMesssage/flashMessageSlice'
 import './style.css';
 import setAuthTokenAsHeader from '../../setAuthTokenAsHeader'
-import { Link } from 'react-router-dom'
 
 export default function NavigationBar(props) {
     const isAuthenticated = useSelector(selectAuth)

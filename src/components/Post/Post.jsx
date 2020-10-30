@@ -32,6 +32,7 @@ export default function Post() {
         const post = { postHeader, postContent, creatorName, postId: shortid.generate() }
         submitPost(post).finally(() => {
             setIsLoading(false)
+            window.location.reload()
         })
     }
 
