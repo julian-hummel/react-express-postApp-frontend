@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, Form } from "react-bootstrap"
 import { useSelector } from 'react-redux'
 import { selectAuth, selectUser, selectAdmin } from '../../features/auth/authSlice'
-import { getPosts, submitPost, removePost } from '../../UserFunctions';
+import { getPosts, submitPost, removePost, sendEmails } from '../../UserFunctions';
 import shortid from 'shortid'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -34,6 +34,7 @@ export default function Post() {
             setIsLoading(false)
             window.location.reload()
         })
+        sendEmails(postCreator.email)
     }
 
     /*

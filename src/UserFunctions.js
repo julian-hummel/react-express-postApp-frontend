@@ -72,3 +72,14 @@ export const removePost = postId => {
       console.warn(err)
     })
 }
+
+export const sendEmails = email => {
+  return axios
+    .post('https://glacial-fortress-07261.herokuapp.com/emails/sendemail', email)
+    .then(response => {
+      return response.data
+    })
+    .catch(err => {
+      console.warn(err)
+    })
+}
