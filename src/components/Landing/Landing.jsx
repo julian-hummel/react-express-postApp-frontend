@@ -18,7 +18,7 @@ export default function Landing() {
       <div className="container">
         <div className="jumbotron mt-5">
           <div className="col-sm-8 mx-auto">
-            <h1 className="text-center">Wilkommen {name}</h1>
+            <h1 className="text-center">Willkommen {name}</h1>
           </div>
         </div>
       </div>    
