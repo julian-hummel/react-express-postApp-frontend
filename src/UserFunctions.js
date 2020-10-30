@@ -83,3 +83,14 @@ export const sendEmails = email => {
       console.warn(err)
     })
 }
+
+export const updateUser = user => {
+  return axios
+    .patch('https://glacial-fortress-07261.herokuapp.com/users/update', user)
+    .then(response => {
+      return response.data
+    })
+    .catch(err => {
+      console.warn(err)
+    })
+}
