@@ -27,6 +27,7 @@
     border-radius: 10px;
     margin-top: 50px;
     margin-left: 50%;
+    margin-right: 50%;
 }
 
 #headerCard {
@@ -39,5 +40,6 @@
 }
 
 #postForm {
-    margin-left: 50%
+   margin-left: 50%;
+   margin-right: 50%
 }

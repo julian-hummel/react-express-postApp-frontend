@@ -4,9 +4,9 @@
     height: auto;
     border: 1.5px solid grey;
     border-radius: 10px;
-    position: center;
-    margin: auto;
+    position: relative;
     margin-top: 7%;
+    border-spacing: 10px;
 }
 
 .registerForm {
