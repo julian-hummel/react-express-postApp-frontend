@@ -1,5 +1,6 @@
 #loginContainer {
-    width: 400px;
+    width: auto;
+    max-width: 400px;
     height: auto;
     border: 1.5px solid grey;
     border-radius: 10px;

@@ -16,11 +16,12 @@
 
 .logoutButton {
     margin-top: 5px;
+    margin-right: 10px;
 }
 
 .profileButton {
-    margin-left: 5px;
     margin-top: 5px;
+    margin-right: 10px
 }
 
 #login {
@@ -29,5 +30,14 @@
 
 #adminBtn {
     margin-top: 5px;
+    margin-right: 10px;
+}
+
+#sessionCounter {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+#posts {
     margin-right: 10px
 }
