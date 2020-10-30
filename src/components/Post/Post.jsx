@@ -13,6 +13,7 @@ export default function Post() {
     const [ postHeader, setPostHeader ] = useState('')
     const [ postContent, setPostContent ] = useState('')
     const [ result, setResult ] = useState([])
+    const [ isLoading, setIsLoading ] = useState(false)
     const isAuthenticated = useSelector(selectAuth)
     const postCreator = useSelector(selectUser)
     const isAdmin = useSelector(selectAdmin)
@@ -25,9 +26,13 @@ export default function Post() {
     /*
      * Posts the given post to the database
      */
-    function onSubmit() {
+    function onSubmit(e) {
+        e.preventDefault()
+        setIsLoading(true)
         const post = { postHeader, postContent, creatorName, postId: shortid.generate() }
-        submitPost(post)
+        submitPost(post).finally(() => {
+            setIsLoading(false)
+        })
     }
 
     /*
@@ -57,7 +62,7 @@ export default function Post() {
                     value={postContent}
                 />
             </Form.Group> 
-            <Button type="submit" id="submitBtn" size="sm">Spruch veröffentlichen</Button>
+            <Button disabled={isLoading} type="submit" id="submitBtn" size="sm">Spruch veröffentlichen</Button>
         </Form>
     );
 
