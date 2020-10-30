@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const register = newUser => {
   return axios
-    .post('users/register', newUser)  
+    .post('https://glacial-fortress-07261.herokuapp.com/users/register', newUser)  
     .then(response => {
       return response.data
     })
@@ -10,7 +10,7 @@ export const register = newUser => {
 
 export const login = user => {
     return axios
-      .post('users/login', user)
+      .post('https://glacial-fortress-07261.herokuapp.com/users/login', user)
       .then(response => {
         localStorage.setItem('usertoken', response.data)
         return response.data
@@ -19,7 +19,7 @@ export const login = user => {
 
 export const getProfile = () => {
   return axios
-    .get('users/profile')
+    .get('https://glacial-fortress-07261.herokuapp.com/users/profile')
     .then(response => {
       return response.data
     })
@@ -30,7 +30,7 @@ export const getProfile = () => {
 
 export const validateToken = () => {
   return axios
-    .get('users/validateToken')
+    .get('https://glacial-fortress-07261.herokuapp.com/users/validateToken')
     .then(response => {
       return response.data
     })
@@ -41,7 +41,7 @@ export const validateToken = () => {
 
 export const submitPost = post => {
   return axios
-    .post('posts/submit', post)
+    .post('https://glacial-fortress-07261.herokuapp.com/posts/submit', post)
     .then(response => {
       return response.data
     })
@@ -52,7 +52,7 @@ export const submitPost = post => {
 
 export const getPosts = () => {
   return axios  
-    .get('posts/fetch')
+    .get('https://glacial-fortress-07261.herokuapp.com/posts/fetch')
     .then(response => {
       return response.data
     })
@@ -64,7 +64,7 @@ export const getPosts = () => {
 export const removePost = postId => {
   console.log(postId)
   return axios
-    .delete('posts/delete/' + postId)
+    .delete('https://glacial-fortress-07261.herokuapp.com/posts/delete/' + postId)
     .then(response => {
       return response.data
     })
