@@ -35,6 +35,7 @@ export default function Login(props) {
             }))
           }
         }) 
+        window.location.reload()
     }
 
     return(        
