@@ -62,7 +62,6 @@ export const getPosts = () => {
 }
 
 export const removePost = postId => {
-  console.log(postId)
   return axios
     .delete('https://glacial-fortress-07261.herokuapp.com/posts/delete/' + postId)
     .then(response => {
@@ -86,7 +85,7 @@ export const sendEmails = email => {
 
 export const updateUser = user => {
   return axios
-    .patch('https://glacial-fortress-07261.herokuapp.com/users/update', user)
+    .put('https://glacial-fortress-07261.herokuapp.com/users/update/' + user.email + '/' + user.notification)
     .then(response => {
       return response.data
     })
