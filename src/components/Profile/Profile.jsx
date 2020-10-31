@@ -17,11 +17,11 @@ export default function Profile(props) {
     })
 
     function onSubmit() {
-      var user = {
+      var userToUpdate = {
         email: user.email,
         notification: setWillNotBeNotificated !== 'on'
       }
-      updateUser(user)
+      updateUser(userToUpdate)
     }
     
     return(        
