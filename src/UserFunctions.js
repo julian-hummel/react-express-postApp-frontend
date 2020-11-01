@@ -93,3 +93,28 @@ export const updateUser = user => {
       console.warn(err)
     })
 }
+
+export const submitComment = comment => {
+  return axios
+    .post('https://glacial-fortress-07261.herokuapp.com/posts/submitComment', comment)
+    .then(response => {
+      return response.data
+    })
+    .catch(err => {
+      console.warn(err)
+    })
+}
+
+export const getRelatedComments = post => {
+  return axios  
+    .get('https://glacial-fortress-07261.herokuapp.com/posts/fetchComments/' + post)
+    .then(response => {
+      return response.data
+    })
+    .catch(err => {
+      console.warn(err)
+    })
+}
+
+
+

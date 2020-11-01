@@ -8,18 +8,6 @@
     margin-left: 50px
 }
 
-#postHeader {
-    margin-left: 50px;
-    width: 420px
-}
-
-#postContent {
-    height: 150px;
-    width: 420px;
-    margin-left: 50px
-
-}
-
 #postContainer {
     width: 500px;
     height: auto;
@@ -38,6 +26,15 @@
     margin-top: 10px
 }
 
-#postForm {
-   margin-left: 75%
+#postContent {
+    height: 150px
+}
+
+#comment {
+    margin-top: 20px
+}
+
+#createPostBtn {
+    margin-left: 128.5%;
+    width: 90px;
 }
