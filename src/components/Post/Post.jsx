@@ -177,33 +177,30 @@ export default function Post() {
                 result.length && <ul>
                     {result.map(res => 
                         <div id="postContainer">
-                            {isAdmin && <Button onClick={e => removePost(e.target.name).then(() => window.location.reload())} type="submit" id="removePostBtn" name={res._id} variant="danger" size="sm">Spruch löschen</Button>}
-                            <div id="headerCard" class="card-body">
-                                {res.postHeader + " (veröffentlicht von " + res.creatorName + ")"}
-                            </div>
-                            <div class="card-body">
-                                {res.postContent}
-                            </div>
-                            <div class="card-body">
-                                {"veröffentlicht: " + res.created.split('T')[0] + (res.creatorName === "Julian Hummel" ? " (admin)" : " (user)")}
-                            </div>
-                            <div class="card-body">
-                                {isAuthenticated && <Button onClick={() => {
-                                        fetchComments(res.postId)
-                                        handleShowCommentsShow()
-                                    }}
-                                    variant="link">
-                                        Kommentare anzeigen
-                                </Button>}
+                            <Card id="singlePost" style={{ width: '25rem' }}>
+                                <Card.Body>
+                                    {isAdmin && <Button onClick={e => removePost(e.target.name).then(() => window.location.reload())} type="submit" id="removePostBtn" name={res._id} variant="danger" size="sm">Spruch löschen</Button>}
+                                    <Card.Title>{res.postHeader}</Card.Title>
+                                <Card.Subtitle className="mb-2 text-muted">{'veröffentlicht von ' + res.creatorName}</Card.Subtitle>
+                                    <Card.Text>{res.postContent}</Card.Text>
+                                    <footer className="blockquote-footer">{res.created.split('T')[0] + ' ' + res.created.substring(res.created.lastIndexOf('T')+1, res.created.lastIndexOf('.'))}</footer>
+                                        {isAuthenticated && <Button onClick={() => {
+                                            fetchComments(res.postId)
+                                            handleShowCommentsShow()
+                                        }}
+                                        variant="link">
+                                            Kommentare anzeigen
+                                    </Button>}
 
-                                {isAuthenticated && <Button onClick={() => {
-                                        setRelatedPost(res.postId)
-                                        handleAddCommentShow()
-                                    }}
-                                    variant="link">
-                                        Kommentieren
-                                </Button>}
-                            </div>
+                                    {isAuthenticated && <Button onClick={() => {
+                                            setRelatedPost(res.postId)
+                                            handleAddCommentShow()
+                                        }}
+                                        variant="link">
+                                            Kommentieren
+                                    </Button>}
+                                </Card.Body>
+                            </Card>
                         </div>
                     )}
                 </ul>

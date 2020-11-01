@@ -53,7 +53,7 @@ export default function NavigationBar(props) {
 
     return (
         <Navbar id="navbar" bg="light" expand="lg">
-            <Navbar.Brand id="logo" href="#">React</Navbar.Brand>
+            <Navbar.Brand id="logo" href="#">Socializor</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
