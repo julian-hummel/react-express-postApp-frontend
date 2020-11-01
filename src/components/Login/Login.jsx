@@ -11,10 +11,12 @@ export default function Login(props) {
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
     const [ errors, setErrors ] = useState({ })
+    const [ isLoading, setIsLoading ] = useState(false)
     const dispatch = useDispatch()
 
     function onSubmit(e) {
         e.preventDefault()
+        setIsLoading(true)
         setErrors({ })
         const user = { email, password }
 
@@ -34,7 +36,10 @@ export default function Login(props) {
                 type: "error"
             }))
           }
-        }) 
+        }).finally(setIsLoading(false))
+        setTimeout(function(){
+            window.location.reload()
+        }, 1000);
     }
 
     return(        
@@ -62,7 +67,7 @@ export default function Login(props) {
                     />
                 </Form.Group>
                     
-                <Button type="submit" className="button" variant="primary" size="sm" block>Einloggen</Button>
+                <Button disabled={isLoading} type="submit" className="button" variant="primary" size="sm" block>Einloggen</Button>
             </Form>
         </div>
     );
