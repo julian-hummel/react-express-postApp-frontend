@@ -156,6 +156,7 @@ export default function Post() {
                                 <Card.Body>
                                     <Card.Title>{'Kommentar von ' + comment.creator}</Card.Title>
                                     <Card.Text>{comment.content}</Card.Text>
+                                    <footer className="blockquote-footer">{comment.created.split('T')[0] + ' ' + comment.created.substring(comment.created.lastIndexOf('T')+1, comment.created.lastIndexOf('.'))}</footer>
                                 </Card.Body>
                             </Card>
                     )}
