@@ -1,15 +1,11 @@
 #container {
     width: 400px;
-    margin-left: 50px
+    margin-left: 50px;
 }
 
 #submitBtn {
     height: 50px;
     margin-left: 50px
-}
-
-#singlePost {
-    margin-top: 50px
 }
 
 #headerCard {
@@ -30,5 +26,18 @@
 }
 
 #createPostBtn {
-    margin-left: 85px
+    margin-left: 85px;
+    margin-top: 50px
+}
+
+#outerContainer {
+    margin-top: -40px
+}
+
+#container {
+    margin-top: 0%
+}
+
+#postContainer {
+    margin-top: 50px
 }

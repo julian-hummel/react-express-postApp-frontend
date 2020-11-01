@@ -5,11 +5,12 @@ import { selectAuth, selectUser, selectAdmin } from '../../features/auth/authSli
 import { getPosts, submitPost, removePost, sendEmails, submitComment, getRelatedComments, commentNotification } from '../../UserFunctions';
 import shortid from 'shortid'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LogoImage from './../../Landschaft.jpg'
 
 import './style.css'
 import { useEffect } from 'react';
 
-export default function Post() {
+export default function Post(props) {
     const [ postHeader, setPostHeader ] = useState('')
     const [ postContent, setPostContent ] = useState('')
     const [ result, setResult ] = useState([])
@@ -29,6 +30,10 @@ export default function Post() {
         fetchPosts()
     }, []);
 
+    var sectionStyle = {
+        backgroundImage: `url(${LogoImage})`
+    }
+
     const handleAddCommentClose = () => setShowAddComment(false)
     const handleAddCommentShow = () => setShowAddComment(true)
 
@@ -36,7 +41,14 @@ export default function Post() {
     const handleShowCommentsShow = () => setShowComments(true)
 
     const handleShowPostFormClose = () => setShowPostForm(false)
-    const handleShowPostFormShow = () => setShowPostForm(true)
+    const handleShowPostFormShow = () => {
+        if(isAuthenticated) {
+            setShowPostForm(true)
+        }else {
+            props.history.push(`/login`)
+        }
+        
+    } 
 
     /*
      * Posts the given post to the database
@@ -171,8 +183,9 @@ export default function Post() {
     );
 
     return(
+        <div style={sectionStyle} id="outerContainer">
         <div id="container">
-            {isAuthenticated && postForm}
+            {postForm}
             {
                 result.length && <ul>
                     {result.map(res => 
@@ -206,6 +219,6 @@ export default function Post() {
                 </ul>
             }
         </div> 
-            
+        </div>   
     )
 }
