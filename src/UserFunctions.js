@@ -116,5 +116,18 @@ export const getRelatedComments = post => {
     })
 }
 
+export const commentNotification = data => {
+  return axios
+    .post('https://glacial-fortress-07261.herokuapp.com/emails/commentNotification', data)
+    .then(response => {
+      return response.data
+    })
+    .catch(err => {
+      console.warn(err)
+    })
+}
+
+
+
 
 

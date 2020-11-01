@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, Form, Modal, Card } from "react-bootstrap"
 import { useSelector } from 'react-redux'
 import { selectAuth, selectUser, selectAdmin } from '../../features/auth/authSlice'
-import { getPosts, submitPost, removePost, sendEmails, submitComment, getRelatedComments } from '../../UserFunctions';
+import { getPosts, submitPost, removePost, sendEmails, submitComment, getRelatedComments, commentNotification } from '../../UserFunctions';
 import shortid from 'shortid'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -63,7 +63,8 @@ export default function Post() {
             creator: creatorName,
             post: relatedPost 
         }
-        submitComment(comment)
+        submitComment(comment) 
+        commentNotification(comment)
     }
 
     /*
