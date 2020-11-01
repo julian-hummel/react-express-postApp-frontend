@@ -83,7 +83,7 @@ export default function Post() {
                                 {res.postContent}
                             </div>
                             <div class="card-body">
-                                {"veröffentlicht: " + res.created.split('T')[0]}
+                                {"veröffentlicht: " + res.created.split('T')[0] + (res.creatorName === "Julian Hummel" ? " (admin)" : " (user)")}
                             </div>
                         </div>
                     )}
