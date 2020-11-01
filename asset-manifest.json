@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-express-postApp-frontend/static/css/main.ab915b15.chunk.css",
-    "main.js": "/react-express-postApp-frontend/static/js/main.58dc2215.chunk.js",
-    "main.js.map": "/react-express-postApp-frontend/static/js/main.58dc2215.chunk.js.map",
+    "main.js": "/react-express-postApp-frontend/static/js/main.1f024570.chunk.js",
+    "main.js.map": "/react-express-postApp-frontend/static/js/main.1f024570.chunk.js.map",
     "runtime-main.js": "/react-express-postApp-frontend/static/js/runtime-main.faaa014b.js",
     "runtime-main.js.map": "/react-express-postApp-frontend/static/js/runtime-main.faaa014b.js.map",
     "static/css/2.2a86faee.chunk.css": "/react-express-postApp-frontend/static/css/2.2a86faee.chunk.css",
     "static/js/2.d0a644a2.chunk.js": "/react-express-postApp-frontend/static/js/2.d0a644a2.chunk.js",
     "static/js/2.d0a644a2.chunk.js.map": "/react-express-postApp-frontend/static/js/2.d0a644a2.chunk.js.map",
     "index.html": "/react-express-postApp-frontend/index.html",
-    "precache-manifest.6ff6572d9b40ea642f4c244e2b714a60.js": "/react-express-postApp-frontend/precache-manifest.6ff6572d9b40ea642f4c244e2b714a60.js",
+    "precache-manifest.7aff6ad7ba00eeb31b26b57a1e1eb8db.js": "/react-express-postApp-frontend/precache-manifest.7aff6ad7ba00eeb31b26b57a1e1eb8db.js",
     "service-worker.js": "/react-express-postApp-frontend/service-worker.js",
     "static/css/2.2a86faee.chunk.css.map": "/react-express-postApp-frontend/static/css/2.2a86faee.chunk.css.map",
     "static/css/main.ab915b15.chunk.css.map": "/react-express-postApp-frontend/static/css/main.ab915b15.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.2a86faee.chunk.css",
     "static/js/2.d0a644a2.chunk.js",
     "static/css/main.ab915b15.chunk.css",
-    "static/js/main.58dc2215.chunk.js"
+    "static/js/main.1f024570.chunk.js"
   ]
 }

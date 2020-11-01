@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bfb2c0646dbe81ad9f0466ca2d0b624a",
+    "revision": "6aedd19a71fa0d0936834709e3ea2df7",
     "url": "/react-express-postApp-frontend/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-express-postApp-frontend/static/css/2.2a86faee.chunk.css"
   },
   {
-    "revision": "1b7edf28ef0a3e1dedb2",
+    "revision": "f186d2f25c824da9737a",
     "url": "/react-express-postApp-frontend/static/css/main.ab915b15.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-express-postApp-frontend/static/js/2.d0a644a2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1b7edf28ef0a3e1dedb2",
-    "url": "/react-express-postApp-frontend/static/js/main.58dc2215.chunk.js"
+    "revision": "f186d2f25c824da9737a",
+    "url": "/react-express-postApp-frontend/static/js/main.1f024570.chunk.js"
   },
   {
     "revision": "e82e0fc34039d2c5aac9",
