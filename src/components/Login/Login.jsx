@@ -20,15 +20,17 @@ export default function Login(props) {
         setErrors({ })
         const user = { email, password }
 
-        dispatch(setCurrentUser({ email }))
-
         login(user).then(res => {
           if (!res.errors) {
+            dispatch(setCurrentUser({ email }))
             dispatch(addFlashMessage({ 
                 text: "Der Login war erfolgreich",
                 type: "success"
             }))
             props.history.push(`/`)
+            setTimeout(function(){
+                window.location.reload()
+            }, 1000);
           }else {
             setErrors(res.errors)
             dispatch(addFlashMessage({ 
@@ -37,9 +39,6 @@ export default function Login(props) {
             }))
           }
         }).finally(setIsLoading(false))
-        setTimeout(function(){
-            window.location.reload()
-        }, 1000);
     }
 
     return(        
