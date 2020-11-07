@@ -127,6 +127,17 @@ export const commentNotification = data => {
     })
 }
 
+export const removeComment = commentId => {
+  return axios
+    .delete('https://glacial-fortress-07261.herokuapp.com/posts/deleteComment/' + commentId)
+    .then(response => {
+      return response.data
+    })
+    .catch(err => {
+      console.warn(err)
+    })
+}
+
 
 
 

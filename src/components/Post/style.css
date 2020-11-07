@@ -17,6 +17,12 @@
     margin-top: 10px
 }
 
+#removeCommentBtn {
+    margin-top: 10px;
+    margin-left: 125px;
+    width: 150px
+}
+
 #postContent {
     height: 150px
 }
