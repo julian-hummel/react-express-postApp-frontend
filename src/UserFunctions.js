@@ -138,6 +138,17 @@ export const removeComment = commentId => {
     })
 }
 
+export const updateUserName = user => {
+  return axios
+    .put('https://glacial-fortress-07261.herokuapp.com/users/updateName/' + user.firstName + '/' + user.lastName)
+    .then(response => {
+      return response.data
+    })
+    .catch(err => {
+      console.warn(err)
+    })
+}
+
 
 
 
