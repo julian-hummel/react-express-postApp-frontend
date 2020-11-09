@@ -140,7 +140,7 @@ export const removeComment = commentId => {
 
 export const updateUserName = user => {
   return axios
-    .put('https://glacial-fortress-07261.herokuapp.com/users/updateName/' + user.firstName + '/' + user.lastName)
+    .put('https://glacial-fortress-07261.herokuapp.com/users/updateUser/' + user.firstName + '/' + user.lastName + '/' + user.email)
     .then(response => {
       return response.data
     })

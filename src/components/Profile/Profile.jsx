@@ -36,7 +36,10 @@ export default function Profile(props) {
     function submitNewName() {
       var user = { firstName, lastName, email: userApp.email }
       updateUserName(user)
-    }
+      handleCloseChangeName()
+      setTimeout(function(){
+        window.location.reload()
+      }, 1000);    }
     
     return(        
       <div className="container">
