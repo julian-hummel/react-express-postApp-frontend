@@ -47,3 +47,11 @@
 #postContainer {
     margin-top: 50px
 }
+
+#fetchSpinner {
+    width: 80px;
+    height: 80px;
+    color: #007BFF;
+    margin-left: 500px;
+    margin-top: 200px
+}

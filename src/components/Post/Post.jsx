@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, Modal, Card } from "react-bootstrap"
+import { Button, Form, Modal, Card, Spinner } from "react-bootstrap"
 import { useSelector } from 'react-redux'
 import { selectAuth, selectUser, selectAdmin } from '../../features/auth/authSlice'
 import { getPosts, submitPost, removePost, removeComment, sendEmails, submitComment, getRelatedComments, commentNotification } from '../../UserFunctions';
@@ -21,6 +21,7 @@ export default function Post(props) {
     const [ showPostForm, setShowPostForm ] = useState(false)
     const [ commentContent, setCommentContent ] = useState('')
     const [ relatedPost, setRelatedPost ] = useState('')
+    const [ isFetchingPosts, setIsFetchingPosts ] = useState(false)
     const isAuthenticated = useSelector(selectAuth)
     const postCreator = useSelector(selectUser)
     const isAdmin = useSelector(selectAdmin)
@@ -47,7 +48,6 @@ export default function Post(props) {
         }else {
             props.history.push(`/login`)
         }
-        
     } 
 
     /*
@@ -83,8 +83,13 @@ export default function Post(props) {
      * Returns array of all posts, fetched from the database
      */
     function fetchPosts() {
-        getPosts().then((res) => setResult(res.reverse()))
-    }
+        try {
+            setIsFetchingPosts(true)
+            getPosts().then((res) => setResult(res.reverse()))
+        }finally {
+            setIsFetchingPosts(false)
+        }
+    }        
 
     function fetchComments(post) {
         getRelatedComments(post).then((res) => setFetchedComments(res.reverse()))
@@ -187,8 +192,11 @@ export default function Post(props) {
         <div style={sectionStyle} id="outerContainer">
         <div id="container">
             {postForm}
+            {isFetchingPosts && <Spinner id="fetchSpinner" animation="border" role="status">
+                <span className="sr-only">Loading...</span>
+            </Spinner>}
             {
-                result.length && <ul>
+                <ul>
                     {result.map(res => 
                         <div id="postContainer">
                             <Card id="singlePost" style={{ width: '25rem' }}>
