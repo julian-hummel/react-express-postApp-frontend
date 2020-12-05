@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import jwtDecode from 'jwt-decode'
+import jwt_decode from 'jwt-decode'
 import { useSelector } from 'react-redux'
 import { selectAuth } from '../../features/auth/authSlice'
 
@@ -10,7 +10,7 @@ export default function Landing() {
 
     let name = ""
     if(token && isAuthenticated) {
-      const user = jwtDecode(token)
+      const user = jwt_decode(token)
       name = user.firstName
     }
 

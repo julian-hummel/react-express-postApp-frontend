@@ -3,6 +3,7 @@ import './App.css';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import Landing from './components/Landing/Landing';
 import Login from './components/Login/Login';
+import Messenger from './components/Messenger/Messenger'
 import { HashRouter as Router, Route } from 'react-router-dom';
 import Register from './components/Register/Register';
 import Profile from './components/Profile/Profile'
@@ -13,6 +14,7 @@ import { setCurrentUser, selectUser } from './features/auth/authSlice'
 import setAuthTokenAsHeader from './setAuthTokenAsHeader'
 import { getProfile, validateToken } from './UserFunctions'
 import { addFlashMessage } from './features/flashMesssage/flashMessageSlice';
+import Christmas from './components/Christmas/Christmas';
 
 function App() {
   const dispatch = useDispatch()
@@ -61,6 +63,8 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/profile" component={Profile} />
         <Route path="/posts" component={Post} />
+        <Route path="/messenger" component={Messenger} />    
+        <Route path="/24" component={Christmas} />  
       </div>
     </Router>
   );
