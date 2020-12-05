@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/react-express-postApp-frontend/static/css/main.d94f8006.chunk.css",
-    "main.js": "/react-express-postApp-frontend/static/js/main.6361d29a.chunk.js",
-    "main.js.map": "/react-express-postApp-frontend/static/js/main.6361d29a.chunk.js.map",
+    "main.css": "/react-express-postApp-frontend/static/css/main.b218da98.chunk.css",
+    "main.js": "/react-express-postApp-frontend/static/js/main.9fd2be04.chunk.js",
+    "main.js.map": "/react-express-postApp-frontend/static/js/main.9fd2be04.chunk.js.map",
     "runtime-main.js": "/react-express-postApp-frontend/static/js/runtime-main.faaa014b.js",
     "runtime-main.js.map": "/react-express-postApp-frontend/static/js/runtime-main.faaa014b.js.map",
     "static/css/2.2a86faee.chunk.css": "/react-express-postApp-frontend/static/css/2.2a86faee.chunk.css",
-    "static/js/2.6a53345f.chunk.js": "/react-express-postApp-frontend/static/js/2.6a53345f.chunk.js",
-    "static/js/2.6a53345f.chunk.js.map": "/react-express-postApp-frontend/static/js/2.6a53345f.chunk.js.map",
+    "static/js/2.1e9c4163.chunk.js": "/react-express-postApp-frontend/static/js/2.1e9c4163.chunk.js",
+    "static/js/2.1e9c4163.chunk.js.map": "/react-express-postApp-frontend/static/js/2.1e9c4163.chunk.js.map",
     "index.html": "/react-express-postApp-frontend/index.html",
-    "precache-manifest.8ca86a3abe4d5da682ce940499d4c154.js": "/react-express-postApp-frontend/precache-manifest.8ca86a3abe4d5da682ce940499d4c154.js",
+    "precache-manifest.65d76117af962ae5a9bdbb83443b2e5e.js": "/react-express-postApp-frontend/precache-manifest.65d76117af962ae5a9bdbb83443b2e5e.js",
     "service-worker.js": "/react-express-postApp-frontend/service-worker.js",
     "static/css/2.2a86faee.chunk.css.map": "/react-express-postApp-frontend/static/css/2.2a86faee.chunk.css.map",
-    "static/css/main.d94f8006.chunk.css.map": "/react-express-postApp-frontend/static/css/main.d94f8006.chunk.css.map",
-    "static/js/2.6a53345f.chunk.js.LICENSE.txt": "/react-express-postApp-frontend/static/js/2.6a53345f.chunk.js.LICENSE.txt",
+    "static/css/main.b218da98.chunk.css.map": "/react-express-postApp-frontend/static/css/main.b218da98.chunk.css.map",
+    "static/js/2.1e9c4163.chunk.js.LICENSE.txt": "/react-express-postApp-frontend/static/js/2.1e9c4163.chunk.js.LICENSE.txt",
     "static/media/Landschaft.jpg": "/react-express-postApp-frontend/static/media/Landschaft.dcdcfa38.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.faaa014b.js",
     "static/css/2.2a86faee.chunk.css",
-    "static/js/2.6a53345f.chunk.js",
-    "static/css/main.d94f8006.chunk.css",
-    "static/js/main.6361d29a.chunk.js"
+    "static/js/2.1e9c4163.chunk.js",
+    "static/css/main.b218da98.chunk.css",
+    "static/js/main.9fd2be04.chunk.js"
   ]
 }
