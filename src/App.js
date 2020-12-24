@@ -14,7 +14,6 @@ import { setCurrentUser, selectUser } from './features/auth/authSlice'
 import setAuthTokenAsHeader from './setAuthTokenAsHeader'
 import { getProfile, validateToken } from './UserFunctions'
 import { addFlashMessage } from './features/flashMesssage/flashMessageSlice';
-import Christmas from './components/Christmas/Christmas';
 
 function App() {
   const dispatch = useDispatch()
@@ -64,7 +63,6 @@ function App() {
         <Route path="/profile" component={Profile} />
         <Route path="/posts" component={Post} />
         <Route path="/messenger" component={Messenger} />    
-        <Route path="/24" component={Christmas} />  
       </div>
     </Router>
   );

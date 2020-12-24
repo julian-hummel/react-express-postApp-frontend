@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Spinner } from 'react-bootstrap';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { login } from '../../UserFunctions';
@@ -67,6 +67,10 @@ export default function Login(props) {
                 </Form.Group>
                     
                 <Button disabled={isLoading} type="submit" className="button" variant="primary" size="sm" block>Einloggen</Button>
+                
+                {isLoading && <Spinner id="loadingSpinner" animation="border" role="status">
+                    <span className="sr-only">Loading...</span>
+                </Spinner>}
             </Form>
         </div>
     );

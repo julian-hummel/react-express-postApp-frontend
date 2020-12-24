@@ -110,6 +110,10 @@ export default function Register(props) {
                     size="sm" block>
                         Registrieren
                 </Button>
+
+                {isLoading && <Spinner id="loadingSpinner" animation="border" role="status">
+                    <span className="sr-only">Loading...</span>
+                </Spinner>}
             </Form>
         </div>
     );

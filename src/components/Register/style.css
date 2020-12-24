@@ -38,3 +38,8 @@
     border-radius: 7px;
     text-align: center;
 }
+
+#loadingSpinner {
+    margin-top: 20px;
+    color: grey
+}
