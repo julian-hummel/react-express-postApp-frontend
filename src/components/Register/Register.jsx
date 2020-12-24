@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Col } from 'react-bootstrap';
+import { Form, Button, Col, Spinner } from 'react-bootstrap';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { register } from '../../UserFunctions';
