@@ -40,9 +40,7 @@ export default function Register(props) {
             }
         }).catch((error) => {
             console.error(error)
-        }).finally(()=>{
-            setIsLoading(false)
-        }) 
+        })
     }
     
     return(    

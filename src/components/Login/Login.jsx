@@ -38,7 +38,7 @@ export default function Login(props) {
                 type: "error"
             }))
           }
-        }).finally(setIsLoading(false))
+        })
     }
 
     return(        
