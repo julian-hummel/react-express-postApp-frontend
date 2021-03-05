@@ -190,7 +190,7 @@ export default function Post(props) {
 
     return(
         <div style={sectionStyle} id="outerContainer">
-            {isFetchingPosts && <Spinner id="fetchSpinner" animation="border" role="status">
+            {!(result.length > 0) && <Spinner id="fetchSpinner" animation="border" role="status">
             <span className="sr-only">Loading...</span>
             </Spinner>}
         <div id="container">
