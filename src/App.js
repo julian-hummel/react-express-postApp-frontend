@@ -3,7 +3,6 @@ import './App.css';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import Landing from './components/Landing/Landing';
 import Login from './components/Login/Login';
-import Messenger from './components/Messenger/Messenger'
 import { HashRouter as Router, Route } from 'react-router-dom';
 import Register from './components/Register/Register';
 import Profile from './components/Profile/Profile'
@@ -61,8 +60,7 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/profile" component={Profile} />
-        <Route path="/posts" component={Post} />
-        <Route path="/messenger" component={Messenger} />    
+        <Route path="/posts" component={Post} />    
       </div>
     </Router>
   );

@@ -86,7 +86,7 @@ export default function Profile(props) {
             <p>Email: {userApp.email}</p>
             <Form onSubmit={onSubmit}>
               <Form.Group controlId="formBasicCheckbox">
-                <Form.Check disabled={isLoading} onClick={ e => setWillBeNotificated(!willBeNotificated) } type="checkbox" label="Ich will Mitteilungen erhalten" />
+                <Form.Check defaultChecked={userApp.notification} disabled={isLoading} onClick={ e => setWillBeNotificated(!willBeNotificated) } type="checkbox" label="Ich will Mitteilungen erhalten" />
               </Form.Group>
               <Button size="sm" variant="primary" type="submit">Speichern</Button>
             </Form>

@@ -58,7 +58,6 @@ export default function NavigationBar(props) {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Item><Nav.Link id="posts" href="#posts">Sprüche</Nav.Link></Nav.Item>
-                    {isAuthenticated && <Nav.Item><Nav.Link id="posts" href="#messenger ">Messenger</Nav.Link></Nav.Item>}
                     {!isAuthenticated && <Nav.Item><Button className="registerButton" href="#register" variant="primary" size="sm">Registrieren</Button>{' '}</Nav.Item>}
                     {isAuthenticated && <Nav.Item><Button href="#profile" className="profileButton" variant="primary" size="sm">Profil</Button>{' '}</Nav.Item>}
                 </Nav>
