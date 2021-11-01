@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, Modal, Card, Spinner } from "react-bootstrap"
+import { Button, Form, Modal, Card, Spinner, Container, Col, Row } from "react-bootstrap"
 import { useSelector } from 'react-redux'
 import { selectAuth, selectUser, selectAdmin } from '../../features/auth/authSlice'
 import { getPosts, submitPost, removePost, removeComment, sendEmails, submitComment, getRelatedComments, commentNotification } from '../../UserFunctions';
@@ -31,10 +31,13 @@ export default function Post(props) {
         fetchPosts()
     }, []);
 
-    var sectionStyle = {
+    /*
+     * Hintergrundbild
+     */
+    /* var sectionStyle = {
         backgroundImage: `url(${LogoImage})`
     }
-
+ */
     const handleAddCommentClose = () => setShowAddComment(false)
     const handleAddCommentShow = () => setShowAddComment(true)
 
@@ -97,8 +100,8 @@ export default function Post(props) {
 
     const postForm = (
         <React.Fragment>
-            <Button id="createPostBtn" variant="primary" onClick={handleShowPostFormShow}>Neuer Spruch</Button>
-
+{/*             <Button id="createPostBtn" variant="primary" onClick={handleShowPostFormShow}>Neuer Spruch</Button>
+ */}
             <Modal show={showPostForm} onHide={handleShowPostFormClose}>
                 <Modal.Header closeButton> 
                 <Modal.Title>Einen neuen Spruch verfassen</Modal.Title>
@@ -188,46 +191,57 @@ export default function Post(props) {
         </React.Fragment>
     );
 
-    return(
-        <div style={sectionStyle} id="outerContainer">
-            {!(result.length > 0) && <Spinner id="fetchSpinner" animation="border" role="status">
-            <span className="sr-only">Loading...</span>
-            </Spinner>}
-        <div id="container">
-            {postForm}
-            {
-                <ul>
-                    {result.map(res => 
-                        <div id="postContainer">
-                            <Card id="singlePost" style={{ width: '25rem' }}>
-                                <Card.Body>
-                                    {isAdmin && <Button onClick={e => removePost(e.target.name).then(() => window.location.reload())} type="submit" id="removePostBtn" name={res._id} variant="danger" size="sm">Spruch löschen</Button>}
-                                    <Card.Title>{res.postHeader}</Card.Title>
-                                <Card.Subtitle className="mb-2 text-muted">{'veröffentlicht von ' + res.creatorName}</Card.Subtitle>
-                                    <Card.Text>{res.postContent}</Card.Text>
-                                    <footer className="blockquote-footer">{res.created.split('T')[0] + ' ' + res.created.substring(res.created.lastIndexOf('T')+1, res.created.lastIndexOf('.'))}</footer>
-                                        {isAuthenticated && <Button onClick={() => {
-                                            fetchComments(res.postId)
-                                            handleShowCommentsShow()
-                                        }}
-                                        variant="link">
-                                            Kommentare anzeigen
-                                    </Button>}
+    const post = (
+        <ul>
+            {result.map(res => 
+                <div id="postContainer">
+                    <Card id="singlePost" style={{ width: '25rem' }}>
+                        <Card.Body>
+                            {isAdmin && <Button onClick={e => removePost(e.target.name).then(() => window.location.reload())} type="submit" id="removePostBtn" name={res._id} variant="danger" size="sm">Spruch löschen</Button>}
+                            <Card.Title>{res.postHeader}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{'veröffentlicht von ' + res.creatorName}</Card.Subtitle>
+                            <Card.Text>{res.postContent}</Card.Text>
+                            <footer className="blockquote-footer">{res.created.split('T')[0] + ' ' + res.created.substring(res.created.lastIndexOf('T')+1, res.created.lastIndexOf('.'))}</footer>
+                                {isAuthenticated && <Button onClick={() => {
+                                    fetchComments(res.postId)
+                                    handleShowCommentsShow()
+                                }}
+                                variant="link">
+                                    Kommentare anzeigen
+                            </Button>}
 
-                                    {isAuthenticated && <Button onClick={() => {
-                                            setRelatedPost(res.postId)
-                                            handleAddCommentShow()
-                                        }}
-                                        variant="link">
-                                            Kommentieren
-                                    </Button>}
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    )}
-                </ul>
-            }
-        </div> 
-        </div>   
+                            {isAuthenticated && <Button onClick={() => {
+                                    setRelatedPost(res.postId)
+                                    handleAddCommentShow()
+                                }}
+                                variant="link">
+                                    Kommentieren
+                            </Button>}
+                        </Card.Body>
+                    </Card>
+                </div>
+            )}
+        </ul>
+    );
+
+    return(
+        <div id="container">
+            <div id="postContainer">
+                <Container>
+                    <Row>
+                        <Col>
+                            <Button id="createPostBtn" variant="primary" onClick={handleShowPostFormShow}>Neuer Spruch</Button>
+                        </Col>
+                        <Col>
+                            {!(result.length > 0) && <Spinner id="fetchSpinner" animation="border" role="status">
+                            <span className="sr-only">Loading...</span>
+                            </Spinner>}
+                        </Col>
+                    </Row>
+                </Container>
+                {postForm}
+                {post}
+            </div>
+        </div>
     )
 }
