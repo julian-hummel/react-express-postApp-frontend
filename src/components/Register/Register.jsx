@@ -45,7 +45,7 @@ export default function Register(props) {
     
     return(    
         <div className="container" id="registerContainer">
-            <h2 className="brand">JH Reactive</h2>
+            <h2 className="brand">Post App</h2>
             <Form onSubmit={onSubmit} className="registerForm" autoComplete="off">
                 {errors.user && <div className="alert alert-danger">{errors.user}</div>}
                 {errors.repeatPassword && <div className="alert alert-danger">{errors.repeatPassword}</div>}

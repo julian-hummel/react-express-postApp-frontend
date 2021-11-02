@@ -34,10 +34,10 @@ export default function Post(props) {
     /*
      * Hintergrundbild
      */
-    /* var sectionStyle = {
+    var sectionStyle = {
         backgroundImage: `url(${LogoImage})`
     }
- */
+
     const handleAddCommentClose = () => setShowAddComment(false)
     const handleAddCommentShow = () => setShowAddComment(true)
 
@@ -100,8 +100,6 @@ export default function Post(props) {
 
     const postForm = (
         <React.Fragment>
-{/*             <Button id="createPostBtn" variant="primary" onClick={handleShowPostFormShow}>Neuer Spruch</Button>
- */}
             <Modal show={showPostForm} onHide={handleShowPostFormClose}>
                 <Modal.Header closeButton> 
                 <Modal.Title>Einen neuen Spruch verfassen</Modal.Title>

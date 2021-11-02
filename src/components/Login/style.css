@@ -1,19 +1,23 @@
 #loginContainer {
-    width: auto;
-    max-width: 400px;
-    height: auto;
-    border: 1.5px solid grey;
+    border: 1.5px solid #ebebeb;
     border-radius: 10px;
-    position: center;
-    margin: auto;
-    margin-top: 7%;
+    width: 450px;
+/*     margin-left: 50px;
+    margin-right: 50px;
+ */    margin-top: 7%;
 }
 
 .loginForm {
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#form {
+    width: 300px;
+}
+
+#emailField {
+    width: 300px;
 }
 
 .brand {
@@ -22,6 +26,7 @@
 
 .button {
     height: 40px;  
+    margin-bottom: 10px;
 }
 
 #errorMessage {
@@ -35,6 +40,6 @@
 }
 
 #loadingSpinner {
-    margin-top: 20px;
-    color: grey
+    color: grey;
+    margin-bottom: 10px;
 }
