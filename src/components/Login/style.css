@@ -1,10 +1,12 @@
 #loginContainer {
+    width: auto;
+    max-width: 400px;
+    height: auto;
     border: 1.5px solid #ebebeb;
     border-radius: 10px;
-    width: 450px;
-/*     margin-left: 50px;
-    margin-right: 50px;
- */    margin-top: 7%;
+    position: relative;
+    margin-top: 2%;
+    border-spacing: 10px;
 }
 
 .loginForm {
@@ -45,13 +47,19 @@
 }
 
 #loginContainerMobile {
-    width: 350px;
+    width: auto;
+    max-width: 400px;
+    height: auto;
+    position: relative;
     margin-top: 7%;
+    border-spacing: 10px;
 }
 
 #formMobile {
-    width: 300px;
-    margin-left: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .brandMobile {
