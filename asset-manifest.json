@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-express-postApp-frontend/static/css/main.3ea14d68.chunk.css",
+    "main.css": "/react-express-postApp-frontend/static/css/main.0144b2e8.chunk.css",
     "main.js": "/react-express-postApp-frontend/static/js/main.cc72e63f.chunk.js",
     "main.js.map": "/react-express-postApp-frontend/static/js/main.cc72e63f.chunk.js.map",
     "runtime-main.js": "/react-express-postApp-frontend/static/js/runtime-main.faaa014b.js",
@@ -9,10 +9,10 @@
     "static/js/2.d9573e59.chunk.js": "/react-express-postApp-frontend/static/js/2.d9573e59.chunk.js",
     "static/js/2.d9573e59.chunk.js.map": "/react-express-postApp-frontend/static/js/2.d9573e59.chunk.js.map",
     "index.html": "/react-express-postApp-frontend/index.html",
-    "precache-manifest.2e6dd20fc85dd806f7ab2e02c972708f.js": "/react-express-postApp-frontend/precache-manifest.2e6dd20fc85dd806f7ab2e02c972708f.js",
+    "precache-manifest.6c1cc94b6ed667ad008b7722ee92bdd9.js": "/react-express-postApp-frontend/precache-manifest.6c1cc94b6ed667ad008b7722ee92bdd9.js",
     "service-worker.js": "/react-express-postApp-frontend/service-worker.js",
     "static/css/2.2a86faee.chunk.css.map": "/react-express-postApp-frontend/static/css/2.2a86faee.chunk.css.map",
-    "static/css/main.3ea14d68.chunk.css.map": "/react-express-postApp-frontend/static/css/main.3ea14d68.chunk.css.map",
+    "static/css/main.0144b2e8.chunk.css.map": "/react-express-postApp-frontend/static/css/main.0144b2e8.chunk.css.map",
     "static/js/2.d9573e59.chunk.js.LICENSE.txt": "/react-express-postApp-frontend/static/js/2.d9573e59.chunk.js.LICENSE.txt",
     "static/media/Landschaft.jpg": "/react-express-postApp-frontend/static/media/Landschaft.dcdcfa38.jpg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.faaa014b.js",
     "static/css/2.2a86faee.chunk.css",
     "static/js/2.d9573e59.chunk.js",
-    "static/css/main.3ea14d68.chunk.css",
+    "static/css/main.0144b2e8.chunk.css",
     "static/js/main.cc72e63f.chunk.js"
   ]
 }
