@@ -11,6 +11,7 @@ import './style.css'
 import { useEffect } from 'react';
 
 export default function Post(props) {
+    const [ matches, setMatches ] = useState(window.matchMedia("(max-width: 600px)").matches)
     const [ postHeader, setPostHeader ] = useState('')
     const [ postContent, setPostContent ] = useState('')
     const [ result, setResult ] = useState([])
@@ -29,6 +30,8 @@ export default function Post(props) {
 
     useEffect(() => {
         fetchPosts()
+        const handler = e => setMatches(e.matches)
+        window.matchMedia("(max-width: 600px)").addEventListener('change', handler)
     }, []);
 
     /*
@@ -191,9 +194,37 @@ export default function Post(props) {
 
     const post = (
         <ul>
-            {result.map(res => 
+            {!matches && result.map(res => 
                 <div id="postContainer">
                     <Card id="singlePost" style={{ width: '25rem' }}>
+                        <Card.Body>
+                            {isAdmin && <Button onClick={e => removePost(e.target.name).then(() => window.location.reload())} type="submit" id="removePostBtn" name={res._id} variant="danger" size="sm">Spruch löschen</Button>}
+                            <Card.Title>{res.postHeader}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{'veröffentlicht von ' + res.creatorName}</Card.Subtitle>
+                            <Card.Text>{res.postContent}</Card.Text>
+                            <footer className="blockquote-footer">{res.created.split('T')[0] + ' ' + res.created.substring(res.created.lastIndexOf('T')+1, res.created.lastIndexOf('.'))}</footer>
+                                {isAuthenticated && <Button onClick={() => {
+                                    fetchComments(res.postId)
+                                    handleShowCommentsShow()
+                                }}
+                                variant="link">
+                                    Kommentare anzeigen
+                            </Button>}
+
+                            {isAuthenticated && <Button onClick={() => {
+                                    setRelatedPost(res.postId)
+                                    handleAddCommentShow()
+                                }}
+                                variant="link">
+                                    Kommentieren
+                            </Button>}
+                        </Card.Body>
+                    </Card>
+                </div>
+            )}
+            {matches && result.map(res => 
+                <div id="postContainer">
+                    <Card id="singlePostMobile" style={{ width: '20rem' }}>
                         <Card.Body>
                             {isAdmin && <Button onClick={e => removePost(e.target.name).then(() => window.location.reload())} type="submit" id="removePostBtn" name={res._id} variant="danger" size="sm">Spruch löschen</Button>}
                             <Card.Title>{res.postHeader}</Card.Title>

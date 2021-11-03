@@ -5,7 +5,7 @@
     border: 1.5px solid #ebebeb;
     border-radius: 10px;
     position: relative;
-    margin-top: 7%;
+    margin-top: 2%;
     border-spacing: 10px;
 }
 
@@ -43,3 +43,13 @@
     margin-top: 20px;
     color: grey
 }
+
+#registerContainerMobile {
+    width: auto;
+    max-width: 400px;
+    height: auto;
+    position: relative;
+    margin-top: 7%;
+    border-spacing: 10px;
+}
+
