@@ -9,7 +9,7 @@ import { addFlashMessage } from '../../features/flashMesssage/flashMessageSlice'
   
 export default function Login(props) {
     const [ email, setEmail ] = useState('')
-    const [ matches, setMatches ] = useState(window.matchMedia("(max-width: 768px)").matches)
+    const [ matches, setMatches ] = useState(window.matchMedia("(max-width: 600px)").matches)
     const [ password, setPassword ] = useState('')
     const [ errors, setErrors ] = useState({ })
     const [ isLoading, setIsLoading ] = useState(false)
@@ -17,7 +17,7 @@ export default function Login(props) {
 
     useEffect(() => {
         const handler = e => setMatches(e.matches)
-        window.matchMedia("(min-width: 768px)").addEventListener('change', handler);
+        window.matchMedia("(max-width: 600px)").addEventListener('change', handler);
     });
 
     function onSubmit(e) {
@@ -44,12 +44,10 @@ export default function Login(props) {
         })
     }
 
-    return(        
+    return(       
+        <div> 
+            {!matches &&
             <Container fluid id="loginContainer">
-                {matches &&
-                <Row className="justify-content-md-center">
-                    <Badge bg="secondary">Mobile Version</Badge>
-                </Row>}
                 <Row className="justify-content-md-center">
                     <h2 className="brand">Post App</h2>
                 </Row>
@@ -88,5 +86,48 @@ export default function Login(props) {
                     }
                 </Row>
             </Container>
+            }
+            {matches &&
+            <Container fluid id="loginContainerMobile">
+                <Row className="justify-content-md-center">
+                    <h2 className="brandMobile">Post App</h2>
+                </Row>
+                <Row className="justify-content-md-center">
+                    <Form onSubmit={onSubmit} className="loginFormMobile" autoComplete="off" id="formMobile">
+                        {errors.login && <div className="alert alert-danger">{errors.login}</div>}
+                        <Form.Group className="emailFieldMobile">
+                            <Form.Control 
+                                id = "email" required
+                                type="email" 
+                                placeholder="E-Mail-Adresse"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                            />
+                            </Form.Group>
+
+                        <Form.Group className="passwordField">
+                            <Form.Control 
+                                id="password" required
+                                type="password" 
+                                placeholder="Passwort" 
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                            />
+                        </Form.Group>
+                        <Button size="sm" type="submit" disabled={isLoading} className="button" variant="primary" block>Einloggen</Button>
+                    </Form>
+                </Row>
+                <Row className="justify-content-md-center">
+                    {isLoading &&
+                    <Col>
+                        <Spinner id="loadingSpinner" animation="border" role="status">
+                            <span className="sr-only">Loading...</span>
+                        </Spinner>
+                    </Col>    
+                    }
+                </Row>
+            </Container>
+            }
+        </div>
     );
 }

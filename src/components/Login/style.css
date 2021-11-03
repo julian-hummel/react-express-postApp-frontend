@@ -43,3 +43,18 @@
     color: grey;
     margin-bottom: 10px;
 }
+
+#loginContainerMobile {
+    width: 350px;
+    margin-top: 7%;
+}
+
+#formMobile {
+    width: 200px;
+    margin-left: 70px;
+}
+
+.brandMobile {
+    margin-top: 15px;
+    margin-left: 105px;
+}
